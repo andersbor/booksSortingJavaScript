@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books, sort in JavaScript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <h1>Books, sort in JavaScript</h1>
+    <div id="app">
+
+        <table v-if="books.length > 1" class="table table-striped">
+            <thead>
+                <th><button v-on:click="sortById()">Id</button></th>
+                <th><button v-on:click="sortByTitle()">Title</button></th>
+                <th>Price
+                    <button v-on:click="sortByPriceAscending()">asc</button>
+                    <button v-on:click="sortByPriceDescending()">desc</button>
+                </th>
+            </thead>
+            <tbody>
+                <tr v-for="book in books">
+                    <td>{{book.id}}</td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
