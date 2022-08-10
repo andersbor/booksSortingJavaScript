@@ -3,7 +3,8 @@ const baseUrl = "http://localhost:49687/api/books"
 Vue.createApp({
     data() {
         return {
-            books: []
+            books: [],
+            title: null
         }
     },
     async created() { // life cycle method. Called when browser reloads page
@@ -31,6 +32,11 @@ Vue.createApp({
         },
         sortByPriceDescending() {
             this.books.sort((book1, book2) => book2.price - book1.price)
+        },
+        filterByTitle(title) {
+            console.log("Title: " + title)
+            this.books = this.books.filter(b => b.title.includes(title))
+            console.log("Books: " + this.books)
         }
     }
 }).mount("#app")

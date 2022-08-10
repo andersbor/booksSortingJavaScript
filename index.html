@@ -12,8 +12,13 @@
 </head>
 
 <body>
-    <h1>Books, sort in JavaScript</h1>
+    <h1>Books, sort + filter in JavaScript</h1>
     <div id="app">
+
+        <input placeholder="Title" type="text" v-model="title">
+        <button v-on:click="filterByTitle(title)" class="btn btn-primary">
+            Filter
+        </button>
 
         <table v-if="books.length > 1" class="table table-striped">
             <thead>
@@ -32,6 +37,7 @@
                 </tr>
             </tbody>
         </table>
+        <div v-else>No such books</div>
     </div>
 
     <script src="index.js"></script>
