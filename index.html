@@ -20,7 +20,7 @@
             Filter
         </button>
 
-        <table v-if="books.length > 1" class="table table-striped">
+        <table v-if="books.length > 0" class="table table-striped">
             <thead>
                 <th><button v-on:click="sortById()">Id</button></th>
                 <th><button v-on:click="sortByTitle()">Title</button></th>
