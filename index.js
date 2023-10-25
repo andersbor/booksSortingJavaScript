@@ -1,5 +1,5 @@
-const baseUrl = "http://localhost:49687/api/books"
-// const baseUrl = "https://anbo-restbooks.azurewebsites.net/api/books" 
+//const baseUrl = "http://localhost:49687/api/books"
+const baseUrl = "https://anbo-books.azurewebsites.net/api/Books" 
 
 
 Vue.createApp({

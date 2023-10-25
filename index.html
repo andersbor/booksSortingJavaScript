@@ -15,7 +15,7 @@
     <h1>Books, sort + filter in JavaScript</h1>
     <div id="app">
 
-        <input placeholder="Title" type="text" v-model="title">
+        <input placeholder="Title" type="text" v-model="title" v-on:keyup.enter="filterByTitle(title)">
         <button v-on:click="filterByTitle(title)" class="btn btn-primary">
             Filter
         </button>
