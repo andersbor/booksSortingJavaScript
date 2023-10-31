@@ -26,17 +26,17 @@ Vue.createApp({
         },
         sortById() {
             // https://www.w3schools.com/js/js_array_sort.asp
-            this.allBooks.sort((book1, book2) => book1.id - book2.id)
+            this.books.sort((book1, book2) => book1.id - book2.id)
         },
         sortByTitle() {
-            this.allBooks.sort((book1, book2) =>
+            this.books.sort((book1, book2) =>
                 book1.title.localeCompare(book2.title))
         },
         sortByPriceAscending() {
-            this.allBooks.sort((book1, book2) => book1.price - book2.price)
+            this.books.sort((book1, book2) => book1.price - book2.price)
         },
         sortByPriceDescending() {
-            this.allBooks.sort((book1, book2) => book2.price - book1.price)
+            this.books.sort((book1, book2) => book2.price - book1.price)
         },
         filterByTitle(title) {
             console.log("Title:" + title + ":")
